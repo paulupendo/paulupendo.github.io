@@ -1,0 +1,70 @@
+body, root {
+    margin: 0;
+    padding: 0 200px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pu-header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 15px 200px;
+    background-color: #fff;
+    color: #204ecf;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    position: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.fw-bold {
+    font-weight: 500;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 500px) {
+    body, root {
+        padding: 15px;
+        font-size: 15px;
+    }
+    
+    .pu-header {
+        padding: 15px;
+    }
+}
