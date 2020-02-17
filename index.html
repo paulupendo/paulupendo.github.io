@@ -1,62 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet" />
+    <title>Paul Upendo</title>
+  </head>
+  <body>
+    <!-- application entry point -->
+    <div id="app"></div>
 
-<html>
-<head>
-    
-    <title>
-    Registration</title>
-   
-    
-    <link rel="stylesheet" href="St.css"/>
-    
-    </head>
-   <body class="body">
-       <div id="top">
-       <div class="boxed2">Kapulel School <span>Registration Panel</span></div>
-       </div>
-       <div id="sidebar">
-       <div class="barcontent"><ul>
-           <li><a href="index.html" class="selected"><img src="images/reg.png"/>Registrations Panel</a></li>
-          
-           <li><a href="Reports.html"><img src="images/report.png"/>Reports Pane</a></li>
-          
-           </ul></div></div>
-       <div class="frm2">
-        <table style="border:1px solid #ccc;padding:10px 10px 10px 10px;">
-       <form action="" method="Post" name="form">
-                
-               <tr style="background-color:#2ecc71;"><td colspan="4"><center>Welcome for online registration</center></td></tr>
-           <tr><td style="background-color:#F0F0F0;"><image src="images/User2.png"/></td><td style="font-size:1.5em;color:#199B00;background-color:#F0F0F0;">Student Details</td><td  style="background-color:#F0F0F0;"><image src="images/User1.png"/></td><td style="font-size:1.5em;color:#199B00;background-color:#F0F0F0;">Guardian Details</td></tr>
-           <tr ></tr>
-           <tr><td>First Name:</td><td><input type="text" name="sfname" placeholder="Enter First name" autofocus/></td><td style="padding-left:20px;">First Name:</td><td><input type="text" name="fname" placeholder="Enter First name"/></td></tr>
-               <tr><td>Last Name:</td><td><input type="text" name="slname" placeholder="Enter Last Name"/></td><td style="padding-left:20px;">Last Name:</td><td><input type="text" name="lname" placeholder="Enter Last Name"/></td></tr>
-               <tr><td>Age:</td><td><input type="text" name="age" placeholder="Enter age" pattern="[0-9]{1,4}" title="12,13,14 e.t.c Press F5 to continue"/></td><td  style="padding-left:20px;">ID Number:</td><td><input type="text" name="id" placeholder="Enter ID Number" pattern="[0-9]{6,10}" title="e.g 32574594 etc. press F5 to continue"/></td></tr>
-               <tr><td>Class:</td><td><select name="class" class="select">
-                   <option value="1" class="option">One</option>
-                   <option value="2"  class="option">Two</option>
-                   <option value="3" class="option">Three</option>
-                   <option value="4" class="option">Four</option>
-                   <option value="5" class="option">Five</option>
-                   <option value="6" class="option">Six</option>
-                   <option value="7" class="option">Seven</option>
-                   <option value="8" class="option">Eight</option>
-                   </select></td><td style="padding-left:20px;">Occupation:</td><td><input type="text" name="occ" placeholder="Enter class"/></td></tr>
-           <tr><td>Admission Number:</td><td><input type="text" name="adm" placeholder="Enter Unique Admission No."/></tr><tr></td><td style="padding-bottom:90px;">Remarks:</td><td><textarea name="remarks1" rows="7" cols="31" placeholder="Input Remarks here" style="padding:2px;border:1px dashed #BBBBBB;border-radius:2px;"></textarea></td><td style="padding-bottom:90px;padding-left:20px;">Remarks:</td><td><textarea name="remarks2" rows="7" cols="31" placeholder="Input Remarks here" style="padding:2px;border:1px dashed #BBBBBB;border-radius:2px;"></textarea></td></tr>
-           <tr><td>Gender:</td><td><input type="radio" name="gender1" value="Male" checked /> Male<br><input type="radio" name="gender1" value="Female" /> Female</td><td  style="padding-left:20px;">Gender:</td><td><input type="radio" name="gender2" value="Male" checked /> Male<br><input type="radio" name="gender2" value="Female" />Female</td></tr>
-                         <tr><td colspan="3"><input type="submit" name="Modify" value="Alter Record"</td><td colspan="4"><input type="submit" name="submit" value="Submit" /></td></tr>
-            
-           </form>
-       </table>
-       </div>
-       <div class='frm2'>
-           <form action="" method="post"> <table>
-           <tr><td><a href="Reports.html">View saved student records</a></td></tr>
-           </table></form>
-      
-       </div>
-       <div class="aler"><table style="width:400px;font-size:0.9em;">
-    <tr><td><center></center></td></tr>
-    <tr><td></td><td></td></tr></table></div>
+    <script type="text/x-template" id="app-template">
+      <div class="pu-header d-flex">
+          <div>{{ title }}</div>
+          <div class="d-flex-column ml-auto">
+              <div class="ml-auto mb-5">{{ companyName }}</div>
+              <a :href="`tel:${telephone}`" class="pointer fw-bold">Contact me: {{ telephone }}</a>
+          </div>
+      </div>
+    </script>
 
-    </body>
-    
+    <!-- Vue Cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- application logic -->
+    <script src="portfolio.js"></script>
+  </body>
 </html>
